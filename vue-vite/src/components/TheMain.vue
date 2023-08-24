@@ -1,12 +1,14 @@
 <script>
   import TheCardTypeSelect from './TheCardTypeSelect.vue';
   import TheMainContent from './TheMainContent.vue';
+  import Loader from './Loader.vue';
 
   export default {
     components: {
-      TheCardTypeSelect,
-      TheMainContent,
-    }
+    TheCardTypeSelect,
+    TheMainContent,
+    Loader,
+}
   };
 </script>
 
@@ -15,6 +17,8 @@
     <TheCardTypeSelect></TheCardTypeSelect>
     <TheMainContent></TheMainContent>
   </div>
+
+  
 </template>
 
 <style scoped lang="scss">
