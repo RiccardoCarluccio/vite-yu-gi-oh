@@ -14,7 +14,6 @@
 <style scoped lang="scss">
   .main-container {
     background-color: white;
-    width: 100%;
     height: 100px;
     padding: 1.5rem;
     display: flex;
