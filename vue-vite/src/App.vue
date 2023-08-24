@@ -19,8 +19,10 @@
 </template>
 
 <style lang="scss">
+  @import "./scss/partials/mixins";
+
   .main-container {
-    background-color: rgba(212,143,56,255);
+    background-color: $color-primary;
     height: calc(100vh - 100px);
     padding: 2rem 5rem;
   }
