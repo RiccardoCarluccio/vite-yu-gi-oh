@@ -20,10 +20,11 @@
 
 <style lang="scss">
   @import "./scss/partials/mixins";
+  @import "./scss/partials/variables";
 
   .main-container {
     background-color: $color-primary;
     height: calc(100vh - 100px);
-    padding: 2rem 5rem;
+    padding: 2rem 4rem;
   }
 </style>

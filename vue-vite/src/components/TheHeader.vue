@@ -12,8 +12,10 @@
 </template>
 
 <style scoped lang="scss">
+  @import "../scss/partials/variables";
+
   .main-container {
-    background-color: white;
+    background-color: $color-secondary;
     height: 100px;
     padding: 1.5rem;
     display: flex;

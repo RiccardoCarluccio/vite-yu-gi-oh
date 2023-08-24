@@ -11,12 +11,18 @@
 </script>
 
 <template>
-  <div class="main-container">
+  <div class="label-content-container">
     <TheCardTypeSelect></TheCardTypeSelect>
     <TheMainContent></TheMainContent>
   </div>
 </template>
 
 <style scoped lang="scss">
+  @import "../scss/partials/mixins";
 
+  .label-content-container {
+    @include flex-col-c-c;
+    align-items: flex-start;
+    gap: 2rem;
+  }
 </style>
