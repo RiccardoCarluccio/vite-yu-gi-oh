@@ -1,11 +1,11 @@
 <script>
-  import TheCardTypeSelect from './TheCardTypeSelect.vue';
+  import TheSearchBar from './TheSearchBar.vue';
   import TheCardList from './TheCardList.vue';
   import Loader from './Loader.vue';
 
   export default {
     components: {
-    TheCardTypeSelect,
+    TheSearchBar,
     TheCardList,
     Loader,
 }
@@ -17,7 +17,7 @@
 
     <div class="label-content-container">
 
-      <TheCardTypeSelect></TheCardTypeSelect>
+      <TheSearchBar></TheSearchBar>
       <TheCardList></TheCardList>
 
     </div>
