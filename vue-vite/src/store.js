@@ -9,6 +9,14 @@ export const store = reactive({
   searchText: "",
 });
 
+export function fetchCards(nextUrl) {
+  const url = nextUrl ?? "https://db.ygoprodeck.com/api/v7/cardinfo.php?num=40&offset=0";
+
+  axios.get(url).then((response) => {
+    store.cards = response.data.data;
+  });
+};
+
 // export function fetchCard(nextUrl) {
 //   store.isLoading = true;
 

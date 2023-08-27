@@ -1,7 +1,7 @@
 <script>
   import axios from "axios";
   import SingleCard from "./SingleCard.vue";
-  import { store } from "../store";
+  import { store, fetchCards } from "../store";
 
   export default {
     components: {
@@ -13,25 +13,16 @@
         store,
       }
     },
-    methods: {
-      fetchCards(nextUrl) {
-        const url = nextUrl ?? "https://db.ygoprodeck.com/api/v7/cardinfo.php?num=40&offset=0";
-
-        axios.get(url).then((response) => {
-          this.cards = response.data.data;
-        })
-      }
-    },
     watch: {
       "store.searchText": function(newSearchText) {
         this.cards = [];
-        this.fetchCards(
+        fetchCards(
           `https://db.ygoprodeck.com/api/v7/cardinfo.php?num=40&offset=0&fname=${newSearchText.toLowerCase()}`
         )
       },
     },
     mounted() {
-      this.fetchCards();
+      fetchCards();
     },
   };
 </script>
@@ -39,7 +30,7 @@
 <template>
   <div class="main-content-container">
 
-    <div class="card-container" v-for="singleCard in cards" :key="singleCard.id">
+    <div class="card-container" v-for="singleCard in store.cards" :key="singleCard.id">
       <SingleCard :card="singleCard"></SingleCard>
     </div>
 
